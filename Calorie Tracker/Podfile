@@ -4,6 +4,6 @@ target 'Calorie Tracker' do
  
   use_frameworks!
 
-pod "SwiftChart"
+pod 'SwiftChart'
 
 end

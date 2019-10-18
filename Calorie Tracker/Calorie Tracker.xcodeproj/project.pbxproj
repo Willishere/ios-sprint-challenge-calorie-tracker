@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,8 +14,10 @@
 		9E2BB5BB235A0C610098F2E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2BB5BA235A0C610098F2E2 /* Assets.xcassets */; };
 		9E2BB5BE235A0C610098F2E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2BB5BD235A0C610098F2E2 /* Preview Assets.xcassets */; };
 		9E2BB5C1235A0C610098F2E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2BB5BF235A0C610098F2E2 /* LaunchScreen.storyboard */; };
-		9E2BB5C9235A0CE00098F2E2 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2BB5C8235A0CE00098F2E2 /* main.storyboard */; };
-		9E2BB5CB235A0DC40098F2E2 /* CalorieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2BB5CA235A0DC40098F2E2 /* CalorieTableViewController.swift */; };
+		9E2BB5D0235A15BD0098F2E2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2BB5CF235A15BD0098F2E2 /* Model.swift */; };
+		9E2BB5D3235A168D0098F2E2 /* Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E2BB5D1235A168D0098F2E2 /* Tracker.xcdatamodeld */; };
+		9E2BB5D5235A17090098F2E2 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2BB5D4235A17090098F2E2 /* Controller.swift */; };
+		9E2BB5E3235A1AF00098F2E2 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2BB5E2235A1AEF0098F2E2 /* main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +31,11 @@
 		9E2BB5BD235A0C610098F2E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9E2BB5C0235A0C610098F2E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E2BB5C2235A0C610098F2E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E2BB5C8235A0CE00098F2E2 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
-		9E2BB5CA235A0DC40098F2E2 /* CalorieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTableViewController.swift; sourceTree = "<group>"; };
+		9E2BB5CF235A15BD0098F2E2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9E2BB5D2235A168D0098F2E2 /* Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tracker.xcdatamodel; sourceTree = "<group>"; };
+		9E2BB5D4235A17090098F2E2 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		9E2BB5E1235A1AD50098F2E2 /* CalorieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTableViewController.swift; sourceTree = "<group>"; };
+		9E2BB5E2235A1AEF0098F2E2 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		C4D5A2F1E15815645EA7CB27 /* Pods-Calorie Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calorie Tracker.release.xcconfig"; path = "Target Support Files/Pods-Calorie Tracker/Pods-Calorie Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,14 +57,15 @@
 				1E53AE9C19D2F0073457A1EA /* Pods-Calorie Tracker.debug.xcconfig */,
 				C4D5A2F1E15815645EA7CB27 /* Pods-Calorie Tracker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		9E2BB5A8235A0C5F0098F2E2 = {
 			isa = PBXGroup;
 			children = (
-				9E2BB5C8235A0CE00098F2E2 /* main.storyboard */,
+				9E2BB5E2235A1AEF0098F2E2 /* main.storyboard */,
+				9E2BB5D6235A171F0098F2E2 /* Controller */,
+				9E2BB5CE235A15A50098F2E2 /* Model */,
 				9E2BB5CC235A0DDD0098F2E2 /* View Controller */,
 				9E2BB5B3235A0C5F0098F2E2 /* Calorie Tracker */,
 				9E2BB5B2235A0C5F0098F2E2 /* Products */,
@@ -101,9 +107,26 @@
 		9E2BB5CC235A0DDD0098F2E2 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9E2BB5CA235A0DC40098F2E2 /* CalorieTableViewController.swift */,
+				9E2BB5E1235A1AD50098F2E2 /* CalorieTableViewController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		9E2BB5CE235A15A50098F2E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E2BB5CF235A15BD0098F2E2 /* Model.swift */,
+				9E2BB5D1235A168D0098F2E2 /* Tracker.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E2BB5D6235A171F0098F2E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E2BB5D4235A17090098F2E2 /* Controller.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C28DD33B5BC01451674FDF06 /* Frameworks */ = {
@@ -177,7 +200,7 @@
 				9E2BB5C1235A0C610098F2E2 /* LaunchScreen.storyboard in Resources */,
 				9E2BB5BE235A0C610098F2E2 /* Preview Assets.xcassets in Resources */,
 				9E2BB5BB235A0C610098F2E2 /* Assets.xcassets in Resources */,
-				9E2BB5C9235A0CE00098F2E2 /* main.storyboard in Resources */,
+				9E2BB5E3235A1AF00098F2E2 /* main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,10 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E2BB5D0235A15BD0098F2E2 /* Model.swift in Sources */,
 				9E2BB5B5235A0C5F0098F2E2 /* AppDelegate.swift in Sources */,
+				9E2BB5D3235A168D0098F2E2 /* Tracker.xcdatamodeld in Sources */,
 				9E2BB5B7235A0C5F0098F2E2 /* SceneDelegate.swift in Sources */,
-				9E2BB5CB235A0DC40098F2E2 /* CalorieTableViewController.swift in Sources */,
 				9E2BB5B9235A0C5F0098F2E2 /* ContentView.swift in Sources */,
+				9E2BB5D5235A17090098F2E2 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +452,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9E2BB5D1235A168D0098F2E2 /* Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9E2BB5D2235A168D0098F2E2 /* Tracker.xcdatamodel */,
+			);
+			currentVersion = 9E2BB5D2235A168D0098F2E2 /* Tracker.xcdatamodel */;
+			path = Tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9E2BB5A9235A0C5F0098F2E2 /* Project object */;
 }
