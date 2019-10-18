@@ -19,13 +19,38 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="ywJ-wX-dTi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="ywJ-wX-dTi" customClass="CalorieTableViewCell" customModule="Calorie_Tracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="228" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ywJ-wX-dTi" id="o2k-nL-IEa">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1h-dH-hLG">
+                                            <rect key="frame" x="40" y="11.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-5R-c7M">
+                                            <rect key="frame" x="332" y="11.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="UnC-5R-c7M" secondAttribute="trailing" constant="20" id="5gf-r5-CRI"/>
+                                        <constraint firstItem="UnC-5R-c7M" firstAttribute="centerY" secondItem="o2k-nL-IEa" secondAttribute="centerY" id="KkV-7D-e2m"/>
+                                        <constraint firstItem="UnC-5R-c7M" firstAttribute="leading" secondItem="B1h-dH-hLG" secondAttribute="trailing" constant="250" id="RdR-x9-1FU"/>
+                                        <constraint firstItem="B1h-dH-hLG" firstAttribute="leading" secondItem="o2k-nL-IEa" secondAttribute="leadingMargin" constant="20" id="kL6-JB-kSJ"/>
+                                        <constraint firstItem="B1h-dH-hLG" firstAttribute="centerY" secondItem="o2k-nL-IEa" secondAttribute="centerY" id="see-Ly-upc"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="calorieText" destination="B1h-dH-hLG" id="RjE-xE-qyj"/>
+                                    <outlet property="dateText" destination="UnC-5R-c7M" id="Ggi-nQ-0kr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -33,7 +33,8 @@ class CalorieTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? CalorieTableViewCell else {return UITableViewCell()}
+        
 
         // Configure the cell...
 

@@ -18,6 +18,7 @@
 		9E2BB5D3235A168D0098F2E2 /* Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E2BB5D1235A168D0098F2E2 /* Tracker.xcdatamodeld */; };
 		9E2BB5D5235A17090098F2E2 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2BB5D4235A17090098F2E2 /* Controller.swift */; };
 		9E2BB5E3235A1AF00098F2E2 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2BB5E2235A1AEF0098F2E2 /* main.storyboard */; };
+		9E2BB5E5235A21B40098F2E2 /* CalorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2BB5E4235A21B40098F2E2 /* CalorieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9E2BB5D4235A17090098F2E2 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		9E2BB5E1235A1AD50098F2E2 /* CalorieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTableViewController.swift; sourceTree = "<group>"; };
 		9E2BB5E2235A1AEF0098F2E2 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		9E2BB5E4235A21B40098F2E2 /* CalorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTableViewCell.swift; sourceTree = "<group>"; };
 		C4D5A2F1E15815645EA7CB27 /* Pods-Calorie Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calorie Tracker.release.xcconfig"; path = "Target Support Files/Pods-Calorie Tracker/Pods-Calorie Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				9E2BB5E1235A1AD50098F2E2 /* CalorieTableViewController.swift */,
+				9E2BB5E4235A21B40098F2E2 /* CalorieTableViewCell.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				9E2BB5B7235A0C5F0098F2E2 /* SceneDelegate.swift in Sources */,
 				9E2BB5B9235A0C5F0098F2E2 /* ContentView.swift in Sources */,
 				9E2BB5D5235A17090098F2E2 /* Controller.swift in Sources */,
+				9E2BB5E5235A21B40098F2E2 /* CalorieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
