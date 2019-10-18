@@ -11,5 +11,7 @@ import Foundation
 class TrackerController{
     var trackRepresentation: TrackerRepresentation?
     
-    
+    func createCalorieTracker(){
+        
+    }
 }
